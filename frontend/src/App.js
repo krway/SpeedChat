@@ -1,16 +1,15 @@
-import "./App.css";
-import Chats from "./Components/Chats";
-import { BrowserRouter, Route } from "react-router-dom";
-import HomePage from "./Components/HomePage";
-import Signup from "./Components/Authentication/Signup";
+// Mongo Password --> Maclz2RpPBMuI8u3
+// https://api.cloudinary.com/v1_1/dreosjljo/image/upload
+import './App.css';
+import { Route } from 'react-router-dom'
+import HomePage from './Pages/HomePage'
+import ChatPage from './Pages/ChatPage'
+
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/signup" exact component={Signup} />
-        <Route path="/chats" exact component={Chats} />
-      </BrowserRouter>
+      <Route path='/' component={HomePage} exact />
+      <Route path='/chats' component={ChatPage} />
     </div>
   );
 }
